@@ -166,9 +166,6 @@ None
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments (***to be updated***)
 
-<h4>App Logo by:</h4>
-
-* <a href="https://www.flaticon.com/free-icons/people" title="people icons">People icons created by Freepik - Flaticon</a>
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
