@@ -166,9 +166,6 @@ None
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments (***to be updated***)
 
-<!--
-* [Pokemon icon set from GitHub, provided by @duiker101](https://github.com/duiker101/pokemon-type-svg-icons)
-* [Bootstrap framework (v5.1.3) ](https://getbootstrap.com/)-->
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
