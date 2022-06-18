@@ -10,6 +10,20 @@ class Event extends Component {
     return newDate;
   };
 
+  handleClick = () => {
+    this.state.collapsed
+      ? this.setState({ collapsed: false })
+      : this.setState({ collapsed: true });
+  };
+
+  adjustButtonText = () => {
+    if (this.state.collapsed === true) {
+      return 'Show details';
+    } else {
+      return 'Hide details';
+    }
+  };
+
   render() {
     const { event } = this.props;
 
@@ -18,7 +32,12 @@ class Event extends Component {
         <p className="start-time">{this.newDateFormat(event.start.dateTime)}</p>
         <h3 className="title">{event.summary}</h3>
         <p className="location">{event.location}</p>
-        <button className="details-btn"></button>
+        {!this.state.collapsed && (
+          <p className="details">{event.description}</p>
+        )}
+        <button className="details-btn" onClick={this.handleClick}>
+          {this.adjustButtonText()}
+        </button>
       </div>
     );
   }
