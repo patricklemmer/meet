@@ -11,7 +11,7 @@ class NumberOfEvents extends Component {
       this.setState({ numberOfEvents: value });
     } else {
       console.log('Please enter a valid number.');
-      return this.state.numberOfEvents;
+      return this.setState.numberOfEvents;
     }
     this.props.updateEvents(undefined, value);
   };
