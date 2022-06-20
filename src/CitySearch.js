@@ -27,7 +27,7 @@ class CitySearch extends Component {
   render() {
     return (
       <div className="CitySearch">
-        <label htmlFor="city-search">Event location: </label>
+        <label htmlFor="city-search">Event location</label>
         <input
           type="text"
           className="city"
