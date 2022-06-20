@@ -29,8 +29,8 @@ class Event extends Component {
 
     return (
       <div className="event">
-        <p className="start-time">{this.newDateFormat(event.start.dateTime)}</p>
         <h3 className="title">{event.summary}</h3>
+        <p className="start-time">{this.newDateFormat(event.start.dateTime)}</p>
         <p className="location">{event.location}</p>
         {!this.state.collapsed && (
           <p className="details">{event.description}</p>
