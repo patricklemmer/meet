@@ -17,6 +17,7 @@ class App extends Component {
     this.mounted = true;
     getEvents().then((events) => {
       this.setState({ locations: extractLocations(events) });
+      this.setState({ events: events.slice(0, this.state.numberOfEvents) });
     });
   }
 
@@ -47,7 +48,10 @@ class App extends Component {
           locations={this.state.locations}
           updateEvents={this.updateEvents}
         />
-        <NumberOfEvents />
+        <NumberOfEvents
+          numberOfEvents={this.state.numberOfEvents}
+          updateEvents={this.updateEvents}
+        />
         <EventList events={this.state.events} />
       </div>
     );
