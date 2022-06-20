@@ -48,8 +48,8 @@ export const getAccessToken = async () => {
       const results = await axios.get(
         'https://salr50ks73.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url'
       );
-      const { authURL } = results.data;
-      return (window.location.href = authURL);
+      const { authUrl } = results.data;
+      return (window.location.href = authUrl);
     }
     return code && getToken(code);
   }
@@ -95,7 +95,7 @@ export const getEvents = async () => {
       token;
     const result = await axios.get(url);
     if (result.data) {
-      let locations = extractLocations(result.data.events);
+      var locations = extractLocations(result.data.events);
       localStorage.setItem('lastEvents', JSON.stringify(result.data));
       localStorage.setItem('locations', JSON.stringify(locations));
     }
