@@ -10,10 +10,6 @@ class NumberOfEvents extends Component {
     if (!isNaN(value) && value >= 1 && value <= 32) {
       this.setState({ numberOfEvents: value });
     }
-    // } else {
-    //   console.log('Please enter a valid number.');
-    //   return this.setState.numberOfEvents;
-    // }
     this.props.updateEvents(undefined, value);
   };
 
