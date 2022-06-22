@@ -9,10 +9,11 @@ class NumberOfEvents extends Component {
     const value = event.target.value;
     if (!isNaN(value) && value >= 1 && value <= 32) {
       this.setState({ numberOfEvents: value });
-    } else {
-      console.log('Please enter a valid number.');
-      return this.setState.numberOfEvents;
     }
+    // } else {
+    //   console.log('Please enter a valid number.');
+    //   return this.setState.numberOfEvents;
+    // }
     this.props.updateEvents(undefined, value);
   };
 
@@ -22,9 +23,11 @@ class NumberOfEvents extends Component {
         <label htmlFor="events-number">Number of Events</label>
         <br />
         <input
-          type="number"
+          type="text"
           id="events-number"
-          value={this.state.numberOfEvents}
+          min={1}
+          max={this.state.numberOfEvents}
+          defaultValue={this.state.numberOfEvents}
           onChange={this.handleNumberChanged}
         />
       </div>
