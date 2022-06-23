@@ -15,6 +15,16 @@ class IntroBox extends Component {
           around the globe with upcoming events. You can also limit the results
           by changing the number below.{' '}
         </p>
+        <p>
+          If you`re curious how this app works behind the scenes, follow&nbsp;
+          <Alert.Link
+            href="https://github.com/patricklemmer/meet"
+            target="_blank"
+          >
+            this link
+          </Alert.Link>
+          &nbsp;to view this app`s GitHub repo.
+        </p>
       </Alert>
     );
   }
