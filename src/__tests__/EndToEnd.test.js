@@ -5,7 +5,7 @@ describe('filter events by city', () => {
   let browser;
   let page;
   beforeAll(async () => {
-    jest.setTimeout(30000);
+    jest.setTimeout(60000);
     browser = await puppeteer.launch();
     // ({
     //   headless: false,
@@ -23,7 +23,7 @@ describe('filter events by city', () => {
   test('When a user hasnt searched for a city, show upcoming events from all cities', async () => {
     await page.waitForSelector('.EventList');
     const eventCount = (await page.$$('.event')).length;
-    expect(eventCount).toBe(2);
+    expect(eventCount).toBe(10);
   });
 
   test('A user should see a list of suggestions when they search for a city', async () => {
@@ -48,7 +48,7 @@ describe('show/hide an event details', () => {
   let browser;
   let page;
   beforeAll(async () => {
-    jest.setTimeout(30000);
+    jest.setTimeout(60000);
     browser = await puppeteer
       .launch
       //   ({
