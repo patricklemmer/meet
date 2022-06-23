@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Form } from 'react-bootstrap';
 
 class CitySearch extends Component {
   state = {
@@ -27,8 +28,8 @@ class CitySearch extends Component {
   render() {
     return (
       <div className="CitySearch">
-        <label htmlFor="city-search">Event location</label>
-        <input
+        {/* <label htmlFor="city-search">Event location</label> */}
+        <Form.Control
           type="text"
           className="city"
           value={this.state.query}

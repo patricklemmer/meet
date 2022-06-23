@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Form } from 'react-bootstrap';
 
 class NumberOfEvents extends Component {
   state = {
@@ -16,9 +17,7 @@ class NumberOfEvents extends Component {
   render() {
     return (
       <div className="numberOfEvents">
-        <label htmlFor="events-number">Number of Events</label>
-        <br />
-        <input
+        <Form.Control
           type="text"
           id="events-number"
           min={1}

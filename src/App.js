@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Container, Row, Col, Form } from 'react-bootstrap';
 import './App.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
@@ -43,17 +44,27 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <CitySearch
-          locations={this.state.locations}
-          updateEvents={this.updateEvents}
-        />
-        <NumberOfEvents
-          numberOfEvents={this.state.numberOfEvents}
-          updateEvents={this.updateEvents}
-        />
-        <EventList events={this.state.events} />
-      </div>
+      <Container fluid className="App">
+        <Form>
+          <Row>
+            <Col lg={8} className="mb-5">
+              <CitySearch
+                locations={this.state.locations}
+                updateEvents={this.updateEvents}
+              />
+            </Col>
+            <Col className="mb-5">
+              <NumberOfEvents
+                numberOfEvents={this.state.numberOfEvents}
+                updateEvents={this.updateEvents}
+              />
+            </Col>
+          </Row>
+        </Form>
+        <Col md={8} className="mx-auto">
+          <EventList events={this.state.events} />
+        </Col>
+      </Container>
     );
   }
 }

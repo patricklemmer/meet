@@ -29,7 +29,7 @@ class Event extends Component {
 
     return (
       <div className="event">
-        <h3 className="title">{event.summary}</h3>
+        <h1 className="title">{event.summary}</h1>
         <p className="start-time">{this.newDateFormat(event.start.dateTime)}</p>
         <p className="location">{event.location}</p>
         {!this.state.collapsed && (
