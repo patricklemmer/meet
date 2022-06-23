@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import './App.css';
 import EventList from './EventList';
+import IntroBox from './IntroBox';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { extractLocations, getEvents } from './api';
@@ -45,6 +46,11 @@ class App extends Component {
   render() {
     return (
       <Container fluid className="App">
+        <Row>
+          <Col xs={8} md={6} className="IntroBox mx-auto mb-4">
+            <IntroBox />
+          </Col>
+        </Row>
         <Form>
           <Row>
             <Col lg={8} className="mb-5">

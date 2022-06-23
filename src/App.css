@@ -35,6 +35,18 @@ p {
   display: block;
 }
 
+.IntroBox h1 {
+  color: rgb(72, 72, 72);
+}
+
+.IntroBox h5 {
+  color: rgb(72, 72, 72);
+}
+
+.IntroBox p {
+  color: rgb(110, 110, 110);
+}
+
 .CitySearch {
   padding: 8px 6px 8px 10px;
   max-width: 350px;
@@ -52,12 +64,12 @@ p {
 }
 
 .suggestions {
-  width: 250px;
+  max-width: 350px;
   position: absolute;
   z-index: 2;
   align-self: center;
-  margin: 0;
-  top: 43px;
+  margin: 0 auto;
+  top: 350px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }

@@ -4,6 +4,7 @@ import App from '../App';
 import EventList from '../EventList';
 import CitySearch from '../CitySearch';
 import NumberOfEvents from '../NumberOfEvents';
+import IntroBox from '../IntroBox';
 import { mockData } from '../mock-data';
 import { extractLocations, getEvents } from '../api';
 
@@ -12,6 +13,11 @@ describe('<App /> component', () => {
   let AppWrapper;
   beforeAll(() => {
     AppWrapper = shallow(<App />);
+  });
+
+  test('render intro box', () => {
+    const AppWrapper = shallow(<App />);
+    expect(AppWrapper.find(IntroBox)).toHaveLength(1);
   });
 
   test('render list of events', () => {
