@@ -29,6 +29,8 @@ import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import * as atatus from 'atatus-spa';
+atatus.config('819e3fca115d4aa4b226839c89a56a1a').install();
 
 const container = document.getElementById('root');
 const root = createRoot(container);
