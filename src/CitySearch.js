@@ -32,7 +32,9 @@ class CitySearch extends Component {
   handleItemClicked = (suggestion) => {
     this.setState({
       query: suggestion,
+      suggestions: [],
       showSuggestions: false,
+      infoText: '',
     });
 
     this.props.updateEvents(suggestion);
@@ -41,6 +43,7 @@ class CitySearch extends Component {
   render() {
     return (
       <div className="CitySearch">
+        <InfoAlert text={this.state.infoText} />
         {/* <label htmlFor="city-search">Event location</label> */}
         <Form.Control
           type="text"
@@ -52,7 +55,6 @@ class CitySearch extends Component {
             this.setState({ showSuggestions: true });
           }}
         />
-        <InfoAlert text={this.state.infoText} />
         <ul
           className="suggestions"
           style={this.state.showSuggestions ? {} : { display: 'none' }}
