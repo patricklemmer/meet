@@ -140,11 +140,6 @@ p {
   font-family: sans-serif;
 }
 
-.Alert {
-  position: fixed;
-  top: 20px;
-}
-
 .data-vis-wrapper {
   display: flex;
   align-items: center;
