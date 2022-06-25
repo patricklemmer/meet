@@ -67,7 +67,7 @@ class App extends Component {
             </Col>
           </Row>
         </Form>
-        <Col md={8} className="mx-auto">
+        <Col md={8} className="mx-auto mb-3">
           <EventList events={this.state.events} />
         </Col>
       </Container>
