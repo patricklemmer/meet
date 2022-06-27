@@ -5,7 +5,9 @@ import EventList from './EventList';
 import IntroBox from './IntroBox';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
-import { extractLocations, getEvents } from './api';
+import { OfflineAlert } from './Alert';
+import { extractLocations, getEvents, checkToken, getAccessToken } from './api';
+import WelcomeScreen from './WelcomeScreen';
 import './nprogress.css';
 
 class App extends Component {
@@ -13,14 +15,41 @@ class App extends Component {
     events: [],
     locations: [],
     numberOfEvents: 32,
+    showWelcomeScreen: 'unedfined',
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     this.mounted = true;
-    getEvents().then((events) => {
-      this.setState({ locations: extractLocations(events) });
-      this.setState({ events: events.slice(0, this.state.numberOfEvents) });
-    });
+    const accessToken = localStorage.getItem('access_token');
+    let isTokenValid;
+    if (accessToken && !navigator.onLine) {
+      isTokenValid = true;
+    } else {
+      isTokenValid = (await checkToken(accessToken)).error ? false : true;
+    }
+    const searchParams = new URLSearchParams(window.location.search);
+    const code = searchParams.get('code');
+    this.setState({ showWelcomeScreen: !(code || isTokenValid) });
+    if ((code || isTokenValid) && this.mounted) {
+      getEvents().then((events) => {
+        if (this.mounted) {
+          this.setState({
+            events: events.slice(0, this.state.numberOfEvents),
+            locations: extractLocations(events),
+          });
+        }
+      });
+    }
+
+    if (!navigator.onLine) {
+      this.setState({
+        offlineText: "Your're offline! The data was loaded from the cache.",
+      });
+    } else {
+      this.setState({
+        offlineText: '',
+      });
+    }
   }
 
   componentWillUnmount() {
@@ -44,10 +73,14 @@ class App extends Component {
   };
 
   render() {
+    if (this.state.showWelcomeScreen === undefined)
+      return <div className="App" />;
+
     return (
       <Container fluid className="App">
         <Row>
           <Col xs={8} md={6} className="mx-auto mb-4">
+            <OfflineAlert text={this.state.offlineText} />
             <IntroBox />
           </Col>
         </Row>
@@ -70,6 +103,12 @@ class App extends Component {
         <Col md={8} className="mx-auto mb-3">
           <EventList events={this.state.events} />
         </Col>
+        <WelcomeScreen
+          showWelcomeScreen={this.state.showWelcomeScreen}
+          getAccessToken={() => {
+            getAccessToken();
+          }}
+        />
       </Container>
     );
   }
