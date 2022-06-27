@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <Container fluid className="App">
         <Row>
-          <Col xs={8} md={6} className="IntroBox mx-auto mb-4">
+          <Col xs={8} md={6} className="mx-auto mb-4">
             <IntroBox />
           </Col>
         </Row>

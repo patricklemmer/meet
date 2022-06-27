@@ -39,6 +39,11 @@ p {
   display: block;
 }
 
+.IntroBox {
+  max-width: 700px;
+  margin: auto;
+}
+
 .IntroBox h1 {
   color: rgb(72, 72, 72);
 }
@@ -96,12 +101,14 @@ p {
 
 .event {
   padding: 15px 15px 35px;
+  margin: auto;
   margin-bottom: 10px;
   text-align: left;
   border: 1px solid #afccb5;
   border-radius: 4px;
   position: relative;
   background-color: #95a498;
+  max-width: 1000px;
 }
 
 .details-btn {
