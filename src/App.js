@@ -121,7 +121,7 @@ class App extends Component {
           </Row>
         </Form>
         <Row>
-          <Col>
+          <Col xs={8} md={6} className="mx-auto mb-4">
             <ScatterChart
               width={730}
               height={250}
