@@ -116,6 +116,14 @@ p {
   max-width: 1000px;
 }
 
+.event h1 {
+  color: #fff;
+}
+
+.event p {
+  color: #f4eeeb;
+}
+
 .details-btn {
   position: absolute;
   right: 20px;
