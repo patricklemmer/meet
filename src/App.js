@@ -16,7 +16,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  ResponsiveContainer,
 } from 'recharts';
 
 class App extends Component {
@@ -126,24 +125,22 @@ class App extends Component {
         </Form>
         <Row>
           <Col>
-            <ResponsiveContainer width={600}>
-              <ScatterChart
-                width={600}
-                height={250}
-                margin={{ top: 20, right: 20, bottom: 10, left: 10 }}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis type="category" dataKey="city" name="City" />
-                <YAxis
-                  type="number"
-                  dataKey="number"
-                  name="Number of events"
-                  allowDecimals={false}
-                />
-                <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-                <Scatter data={this.getData()} fill="#8884d8" />
-              </ScatterChart>
-            </ResponsiveContainer>
+            <ScatterChart
+              width={600}
+              height={250}
+              margin={{ top: 20, right: 20, bottom: 10, left: 10 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis type="category" dataKey="city" name="City" />
+              <YAxis
+                type="number"
+                dataKey="number"
+                name="Number of events"
+                allowDecimals={false}
+              />
+              <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+              <Scatter data={this.getData()} fill="#8884d8" />
+            </ScatterChart>
           </Col>
         </Row>
         <Col md={8} className="mx-auto mb-3">
