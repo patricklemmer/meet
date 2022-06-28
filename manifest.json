@@ -22,7 +22,6 @@
     }
   ],
   "start_url": ".",
-  "id": "/meet/",
   "display": "standalone",
   "theme_color": "#afccb5",
   "background_color": "#333"
