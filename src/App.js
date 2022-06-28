@@ -125,9 +125,9 @@ class App extends Component {
           </Row>
         </Form>
         <Row>
-          <ResponsiveContainer width={700} height="80%">
+          <ResponsiveContainer width={600}>
             <ScatterChart
-              width={730}
+              width={600}
               height={250}
               margin={{ top: 20, right: 20, bottom: 10, left: 10 }}
             >
