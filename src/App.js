@@ -100,7 +100,10 @@ class App extends Component {
       <Container fluid className="App">
         <Row>
           <Col xs={8} md={6} className="mx-auto mb-4">
-            <OfflineAlert text={this.state.offlineText} />
+            <OfflineAlert
+              className="offline_alert"
+              text={this.state.offlineText}
+            />
             <IntroBox />
           </Col>
         </Row>

@@ -35,8 +35,13 @@ p {
 .display-none {
   display: none;
 }
+
 .showSuggestions {
   display: block;
+}
+
+.offline_alert {
+  margin: auto;
 }
 
 .IntroBox {
