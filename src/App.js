@@ -124,27 +124,25 @@ class App extends Component {
             </Col>
           </Row>
         </Form>
-        <Row>
-          <ResponsiveContainer height={400}>
-            <ScatterChart
-              className="chart"
-              width={800}
-              margin={{ top: 20, right: 20, bottom: 40, left: 20 }}
-            >
-              <CartesianGrid stroke="#333" strokeDasharray="3 3" />
-              <XAxis type="category" dataKey="city" name="City" stroke="#333" />
-              <YAxis
-                type="number"
-                dataKey="number"
-                name="Number of events"
-                allowDecimals={false}
-                stroke="#333"
-              />
-              <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-              <Scatter data={this.getData()} fill="#8884d8" />
-            </ScatterChart>
-          </ResponsiveContainer>
-        </Row>
+        <ResponsiveContainer height={400}>
+          <ScatterChart
+            className="chart"
+            width={800}
+            margin={{ top: 20, right: 20, bottom: 40, left: 20 }}
+          >
+            <CartesianGrid stroke="#333" strokeDasharray="3 3" />
+            <XAxis type="category" dataKey="city" name="City" stroke="#333" />
+            <YAxis
+              type="number"
+              dataKey="number"
+              name="Number of events"
+              allowDecimals={false}
+              stroke="#333"
+            />
+            <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+            <Scatter data={this.getData()} fill="#8884d8" />
+          </ScatterChart>
+        </ResponsiveContainer>
         <Col md={8} className="mx-auto mb-3">
           <EventList events={this.state.events} />
         </Col>
