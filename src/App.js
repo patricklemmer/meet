@@ -1,14 +1,6 @@
-// Component imports
+// Imports
 import React, { Component } from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
-import EventList from './EventList';
-import IntroBox from './IntroBox';
-import CitySearch from './CitySearch';
-import NumberOfEvents from './NumberOfEvents';
-import { OfflineAlert } from './Alert';
-import { extractLocations, getEvents, checkToken, getAccessToken } from './api';
-import WelcomeScreen from './WelcomeScreen';
-import EventGenre from './EventGenre';
 import {
   ScatterChart,
   Scatter,
@@ -18,6 +10,17 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
+
+// Component imports
+import EventList from './EventList';
+import IntroBox from './IntroBox';
+import CitySearch from './CitySearch';
+import NumberOfEvents from './NumberOfEvents';
+import { OfflineAlert } from './Alert';
+import { extractLocations, getEvents, checkToken, getAccessToken } from './api';
+import WelcomeScreen from './WelcomeScreen';
+import EventGenre from './EventGenre';
+import NavBar from './NavBar';
 
 // Style imports
 import './App.css';
@@ -103,6 +106,7 @@ class App extends Component {
 
     return (
       <Container fluid className="App">
+        <NavBar />
         <Row>
           <Col xs={8} md={6} className="mx-auto mb-4">
             <OfflineAlert

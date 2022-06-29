@@ -179,15 +179,15 @@ p {
   align-items: center;
   flex-direction: column;
 }
-/* .data-vis-wrapper .recharts-responsive-container {
+.data-vis-wrapper .recharts-responsive-container {
   min-width: 100%;
   display: flex;
 }
 .recharts-surface {
   overflow: visible;
-} */
+}
 
-@media only screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .data-vis-wrapper {
     flex-direction: row;
   }
@@ -197,9 +197,7 @@ p {
     min-width: auto;
     margin: 0 auto;
   }
-}
 
-@media screen and (min-width: 992px) {
   .CitySearch {
     margin-right: 15%;
   }
