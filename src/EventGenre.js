@@ -19,11 +19,11 @@ const EventGenre = ({ events }) => {
     setData(() => getData());
   }, [events]);
 
-  const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#ba00fe'];
+  const colors = ['##2980b9', '##16a085', '##f1c40f', '##e67e22', '##9b59b6'];
 
   return (
     <ResponsiveContainer height={400}>
-      <PieChart width={400} height={400}>
+      <PieChart width={300} height={300}>
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
         <Pie
           data={data}
