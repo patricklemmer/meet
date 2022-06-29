@@ -94,133 +94,75 @@ class App extends Component {
   };
 
   render() {
-    const {
-      locations,
-      numberOfEvents,
-      events,
-      offlineText,
-      showWelcomeScreen,
-    } = this.state;
-
-    if (showWelcomeScreen === undefined) return <div className="App" />;
+    if (this.state.showWelcomeScreen === undefined)
+      return <div className="App" />;
 
     return (
-      <div className="App">
-        <h1>Meet App</h1>
-        <OfflineAlert text={offlineText} />
-        <CitySearch locations={locations} updateEvents={this.updateEvents} />
-        <NumberOfEvents
-          numberOfEvents={numberOfEvents}
-          updateEvents={this.updateEvents}
-        />
-        <h2>Overview of the events</h2>
-        <div className="data-vis-wrapper">
-          <ResponsiveContainer height={400}>
-            <ScatterChart margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
-              <CartesianGrid stroke="#909090" strokeDasharray="2 2" />
-              <XAxis
-                type="category"
-                dataKey="city"
-                name="City"
-                stroke="#909090"
+      <Container fluid className="App">
+        <Row>
+          <Col xs={8} md={6} className="mx-auto mb-4">
+            <OfflineAlert
+              className="offline_alert"
+              text={this.state.offlineText}
+            />
+            <IntroBox />
+          </Col>
+        </Row>
+        <Form>
+          <Row>
+            <Col lg={8} className="mb-5">
+              <CitySearch
+                locations={this.state.locations}
+                updateEvents={this.updateEvents}
               />
+            </Col>
+            <Col className="mb-5">
+              <NumberOfEvents
+                numberOfEvents={this.state.numberOfEvents}
+                updateEvents={this.updateEvents}
+              />
+            </Col>
+          </Row>
+        </Form>
+        <Row className="data-vis-wrapper">
+          <ResponsiveContainer
+            className="recharts-responsive-container"
+            height={400}
+            margin={{ top: 20, right: 20, bottom: 40, left: 20 }}
+          >
+            <ScatterChart
+              style={{
+                border: '3px solid red',
+              }}
+              width={700}
+              margin={{ top: 20, right: 20, bottom: 40, left: 20 }}
+            >
+              <CartesianGrid stroke="#333" strokeDasharray="3 3" />
+              <XAxis type="category" dataKey="city" name="City" stroke="#333" />
               <YAxis
                 type="number"
                 dataKey="number"
                 name="Number of events"
                 allowDecimals={false}
-                stroke="#909090"
+                stroke="#333"
               />
-              <Tooltip cursor={{ stroke: '#ff6200', strokeDasharray: '2 2' }} />
-              <Scatter data={this.getData()} fill="#ff6200" shape="star" />
+              <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+              <Scatter data={this.getData()} fill="#8884d8" />
             </ScatterChart>
           </ResponsiveContainer>
-        </div>
-        <h2>Events</h2>
-        <EventList events={events} />
-        <WelcomeScreen
-          showWelcomeScreen={showWelcomeScreen}
+        </Row>
+        <Col md={8} className="mx-auto mb-3">
+          <EventList events={this.state.events} />
+        </Col>
+        {/* <WelcomeScreen
+          showWelcomeScreen={this.state.showWelcomeScreen}
           getAccessToken={() => {
             getAccessToken();
           }}
-        />
-      </div>
+        /> */}
+      </Container>
     );
   }
 }
 
 export default App;
-
-//   render() {
-//     if (this.state.showWelcomeScreen === undefined)
-//       return <div className="App" />;
-
-//     return (
-//       <Container fluid className="App">
-//         <Row>
-//           <Col xs={8} md={6} className="mx-auto mb-4">
-//             <OfflineAlert
-//               className="offline_alert"
-//               text={this.state.offlineText}
-//             />
-//             <IntroBox />
-//           </Col>
-//         </Row>
-//         <Form>
-//           <Row>
-//             <Col lg={8} className="mb-5">
-//               <CitySearch
-//                 locations={this.state.locations}
-//                 updateEvents={this.updateEvents}
-//               />
-//             </Col>
-//             <Col className="mb-5">
-//               <NumberOfEvents
-//                 numberOfEvents={this.state.numberOfEvents}
-//                 updateEvents={this.updateEvents}
-//               />
-//             </Col>
-//           </Row>
-//         </Form>
-//         <Row className="data-vis-wrapper">
-//           <ResponsiveContainer
-//             className="recharts-responsive-container"
-//             height={400}
-//             margin={{ top: 20, right: 20, bottom: 40, left: 20 }}
-//           >
-//             <ScatterChart
-//               style={{
-//                 border: '3px solid red',
-//               }}
-//               width={700}
-//               margin={{ top: 20, right: 20, bottom: 40, left: 20 }}
-//             >
-//               <CartesianGrid stroke="#333" strokeDasharray="3 3" />
-//               <XAxis type="category" dataKey="city" name="City" stroke="#333" />
-//               <YAxis
-//                 type="number"
-//                 dataKey="number"
-//                 name="Number of events"
-//                 allowDecimals={false}
-//                 stroke="#333"
-//               />
-//               <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-//               <Scatter data={this.getData()} fill="#8884d8" />
-//             </ScatterChart>
-//           </ResponsiveContainer>
-//         </Row>
-//         <Col md={8} className="mx-auto mb-3">
-//           <EventList events={this.state.events} />
-//         </Col>
-//         <WelcomeScreen
-//           showWelcomeScreen={this.state.showWelcomeScreen}
-//           getAccessToken={() => {
-//             getAccessToken();
-//           }}
-//         />
-//       </Container>
-//     );
-//   }
-// }
-
-// export default App;
