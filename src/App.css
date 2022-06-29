@@ -187,15 +187,6 @@ p {
   overflow: visible;
 }
 
-.btn-text {
-  float: right;
-  margin: 11px 11px 0 0;
-  color: #fff;
-  font-size: 14px;
-  letter-spacing: 0.2px;
-  font-family: 'Noto Sans Display', sans-serif;
-}
-
 @media only screen and (min-width: 992px) {
   .data-vis-wrapper {
     flex-direction: row;

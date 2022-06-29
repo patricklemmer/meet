@@ -132,7 +132,7 @@ class App extends Component {
           >
             <ScatterChart
               style={{
-                border: '3px solid red',
+                border: '3px solid blue',
               }}
               width={700}
               margin={{ top: 20, right: 20, bottom: 40, left: 20 }}
@@ -154,12 +154,12 @@ class App extends Component {
         <Col md={8} className="mx-auto mb-3">
           <EventList events={this.state.events} />
         </Col>
-        {/* <WelcomeScreen
+        <WelcomeScreen
           showWelcomeScreen={this.state.showWelcomeScreen}
           getAccessToken={() => {
             getAccessToken();
           }}
-        /> */}
+        />
       </Container>
     );
   }
