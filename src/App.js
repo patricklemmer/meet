@@ -9,6 +9,15 @@ import { OfflineAlert } from './Alert';
 import { extractLocations, getEvents, checkToken, getAccessToken } from './api';
 import WelcomeScreen from './WelcomeScreen';
 import './nprogress.css';
+import {
+  ScatterChart,
+  Scatter,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from 'recharts';
 
 class App extends Component {
   state = {
@@ -98,6 +107,28 @@ class App extends Component {
             />
             <IntroBox />
           </Col>
+        </Row>
+        <Row>
+          <ResponsiveContainer height={400}>
+            <ScatterChart margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis
+                type="category"
+                dataKey="city"
+                name="City"
+                stroke="#909090"
+              />
+              <YAxis
+                type="number"
+                dataKey="number"
+                name="Number of events"
+                allowDecimals={false}
+                stroke="#909090"
+              />
+              <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+              <Scatter data={this.getData()} fill="#8884d8" />
+            </ScatterChart>
+          </ResponsiveContainer>
         </Row>
         <Form>
           <Row>
