@@ -1,6 +1,6 @@
+// Component imports
 import React, { Component } from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
-import './App.css';
 import EventList from './EventList';
 import IntroBox from './IntroBox';
 import CitySearch from './CitySearch';
@@ -8,7 +8,7 @@ import NumberOfEvents from './NumberOfEvents';
 import { OfflineAlert } from './Alert';
 import { extractLocations, getEvents, checkToken, getAccessToken } from './api';
 import WelcomeScreen from './WelcomeScreen';
-import './nprogress.css';
+import EventGenre from './EventGenre';
 import {
   ScatterChart,
   Scatter,
@@ -18,6 +18,10 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
+
+// Style imports
+import './App.css';
+import './nprogress.css';
 
 class App extends Component {
   state = {
@@ -125,6 +129,7 @@ class App extends Component {
           </Row>
         </Form>
         <Row className="data-vis-wrapper">
+          <EventGenre events={this.state.events} />
           <ResponsiveContainer
             className="recharts-responsive-container"
             height={400}
