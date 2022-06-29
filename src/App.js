@@ -127,8 +127,9 @@ class App extends Component {
         <Row>
           <ResponsiveContainer height={400}>
             <ScatterChart
+              className="chart"
               width={800}
-              margin={{ top: 20, right: 20, bottom: 10, left: 10 }}
+              margin={{ top: 20, right: 20, bottom: 40, left: 20 }}
             >
               <CartesianGrid stroke="#333" strokeDasharray="3 3" />
               <XAxis type="category" dataKey="city" name="City" stroke="#333" />

@@ -104,6 +104,10 @@ p {
   background-color: #bcdcdb;
 }
 
+.chart {
+  background-color: rgba(175, 204, 181, 0.5);
+}
+
 .event {
   padding: 15px 15px 35px;
   margin: auto;
