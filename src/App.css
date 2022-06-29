@@ -104,6 +104,12 @@ p {
   background-color: #bcdcdb;
 }
 
+.chart_container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin: auto;
+}
+
 .chart {
   background-color: rgba(244, 238, 235, 0.25);
 }

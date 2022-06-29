@@ -124,10 +124,14 @@ class App extends Component {
             </Col>
           </Row>
         </Form>
-        <ResponsiveContainer height={400}>
+        <ResponsiveContainer
+          height={400}
+          margin={{ top: 20, right: 20, bottom: 40, left: 20 }}
+        >
           <ScatterChart
-            className="chart"
-            width={800}
+            backgroundColor="rgba(244, 238, 235, 0.25)"
+            width={500}
+            border="3px solid red"
             margin={{ top: 20, right: 20, bottom: 40, left: 20 }}
           >
             <CartesianGrid stroke="#333" strokeDasharray="3 3" />
