@@ -20,7 +20,6 @@ import { OfflineAlert } from './Alert';
 import { extractLocations, getEvents, checkToken, getAccessToken } from './api';
 import WelcomeScreen from './WelcomeScreen';
 import EventGenre from './EventGenre';
-import NavBar from './NavBar';
 
 // Style imports
 import './App.css';
@@ -106,7 +105,6 @@ class App extends Component {
 
     return (
       <Container fluid className="App">
-        <NavBar className="navbar" fixed="top" />
         <Row>
           <Col xs={8} md={6} className="mx-auto mb-4">
             <OfflineAlert
