@@ -141,6 +141,7 @@ class App extends Component {
               }}
               width={700}
               margin={{ top: 20, right: 20, bottom: 40, left: 20 }}
+              padding={{ top: 5, right: 20, bottom: 5, left: 20 }}
             >
               <CartesianGrid stroke="#333" strokeDasharray="3 3" />
               <XAxis type="category" dataKey="city" name="City" stroke="#333" />
