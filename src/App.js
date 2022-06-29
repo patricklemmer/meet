@@ -106,7 +106,7 @@ class App extends Component {
 
     return (
       <Container fluid className="App">
-        <NavBar />
+        <NavBar className="navbar" fixed="top" />
         <Row>
           <Col xs={8} md={6} className="mx-auto mb-4">
             <OfflineAlert
