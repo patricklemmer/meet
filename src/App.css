@@ -179,13 +179,13 @@ p {
   align-items: center;
   flex-direction: column;
 }
-.data-vis-wrapper .recharts-responsive-container {
+/* .data-vis-wrapper .recharts-responsive-container {
   min-width: 100%;
   display: flex;
 }
 .recharts-surface {
   overflow: visible;
-}
+} */
 
 @media only screen and (min-width: 992px) {
   .data-vis-wrapper {
