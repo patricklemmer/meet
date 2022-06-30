@@ -162,10 +162,12 @@ p {
   margin: auto;
 }
 .data-vis-wrapper .recharts-responsive-container {
+  border: 3px solid green;
   min-width: 100%;
   display: flex;
 }
 .recharts-surface {
+  border: 3px solid blue;
   overflow: visible;
 }
 
