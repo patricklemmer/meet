@@ -19,6 +19,7 @@
 h3,
 h4 {
   color: #333;
+  margin-bottom: 10px;
 }
 
 .login-button {
@@ -59,11 +60,12 @@ h4 {
   background-color: #fff;
 }
 .google-icon {
-  position: absolute;
-  margin-top: 11px;
-  margin-left: -8px;
-  width: 18px;
-  height: 18px;
+  position: relative;
+  /* margin-top: 11px;
+  margin-left: -8px; */
+  width: 20px;
+  height: 20px;
+  top: 25%;
 }
 .btn-text {
   float: right;

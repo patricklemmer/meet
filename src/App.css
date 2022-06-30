@@ -140,17 +140,6 @@ ul {
   margin: auto;
 }
 
-.recharts-surface svg {
-  color: red;
-}
-
-.chart_grid,
-.chart_xaxis,
-.chart_yaxis,
-.chart_scatter {
-  color: var(--primary-text);
-}
-
 .event {
   padding: 15px 15px 35px;
   margin: auto;
