@@ -127,10 +127,7 @@ class App extends Component {
         </Form>
         <Row className="data-vis-wrapper">
           <EventGenre events={this.state.events} />
-          <ResponsiveContainer
-            className="recharts-responsive-container"
-            height={400}
-          >
+          <ResponsiveContainer height={400}>
             <ScatterChart
               style={{
                 border: '3px solid black',
