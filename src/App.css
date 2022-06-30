@@ -126,7 +126,7 @@ p {
   color: #6d6d6d;
 }
 
-.name {
+/* .name {
   font-size: 18px;
   font-weight: 600;
 }
@@ -151,23 +151,23 @@ p {
   grid-gap: 20px;
   padding: 20px;
   font-family: sans-serif;
-}
+} */
 
 .data-vis-wrapper {
   border: 3px solid red;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  margin-right: 10%;
-  margin-left: 10%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
-.data-vis-wrapper .recharts-responsive-container {
+/* .data-vis-wrapper .recharts-responsive-container {
   min-width: 100%;
   display: flex;
 }
 .recharts-surface {
   overflow: visible;
-}
+} */
 
 @media screen and (min-width: 992px) {
   .data-vis-wrapper {
