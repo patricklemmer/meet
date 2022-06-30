@@ -169,6 +169,8 @@ p {
 .recharts-surface {
   border: 3px solid blue;
   overflow: visible;
+  margin: auto;
+  align-items: center;
 }
 
 @media screen and (min-width: 992px) {
