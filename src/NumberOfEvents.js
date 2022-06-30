@@ -20,6 +20,7 @@ class NumberOfEvents extends Component {
   render() {
     return (
       <div className="numberOfEvents">
+        <p>Show</p>
         <Form.Control
           type="text"
           id="events-number"
@@ -28,6 +29,7 @@ class NumberOfEvents extends Component {
           defaultValue={this.state.numberOfEvents}
           onChange={this.handleNumberChanged}
         />
+        <p>events</p>
         <ErrorAlert text={this.state.ErrorText} />
       </div>
     );

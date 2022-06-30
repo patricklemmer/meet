@@ -114,12 +114,10 @@ class App extends Component {
               />
             </Col>
             <Col className="mb-3">
-              <p>Show</p>
               <NumberOfEvents
                 numberOfEvents={this.state.numberOfEvents}
                 updateEvents={this.updateEvents}
               />
-              <p>events</p>
             </Col>
           </Row>
         </Form>
