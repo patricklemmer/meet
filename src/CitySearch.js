@@ -44,6 +44,8 @@ class CitySearch extends Component {
     return (
       <div className="CitySearch">
         {/* <label htmlFor="city-search">Event location</label> */}
+        <InfoAlert text={this.state.infoText} />
+        <h5>Find events in</h5>
         <Form.Control
           type="text"
           className="city"
@@ -54,7 +56,6 @@ class CitySearch extends Component {
             this.setState({ showSuggestions: true });
           }}
         />
-        <InfoAlert text={this.state.infoText} />
         <ul
           className="suggestions"
           style={this.state.showSuggestions ? {} : { display: 'none' }}

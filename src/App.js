@@ -106,14 +106,14 @@ class App extends Component {
       <Container fluid className="App">
         <OfflineAlert className="offline_alert" text={this.state.offlineText} />
         <Form>
-          <Row>
-            <Col lg={8} className="mb-3">
+          <Row className="textboxes">
+            <Col className="mb-2">
               <CitySearch
                 locations={this.state.locations}
                 updateEvents={this.updateEvents}
               />
             </Col>
-            <Col className="mb-3">
+            <Col className="mb-2">
               <NumberOfEvents
                 numberOfEvents={this.state.numberOfEvents}
                 updateEvents={this.updateEvents}
@@ -121,10 +121,13 @@ class App extends Component {
             </Col>
           </Row>
         </Form>
-        <Row className="data-vis-wrapper">
+        <div className="data-vis-wrapper">
           <EventGenre events={this.state.events} />
           <ResponsiveContainer height={400}>
-            <ScatterChart margin={{ top: 20, right: 20, bottom: 40, left: 20 }}>
+            <ScatterChart
+              width={600}
+              margin={{ top: 20, right: 50, bottom: 20, left: 10 }}
+            >
               <CartesianGrid stroke="#333" strokeDasharray="3 3" />
               <XAxis type="category" dataKey="city" name="City" stroke="#333" />
               <YAxis
@@ -138,7 +141,7 @@ class App extends Component {
               <Scatter data={this.getData()} fill="#8884d8" />
             </ScatterChart>
           </ResponsiveContainer>
-        </Row>
+        </div>
         <Col md={8} className="mx-auto mb-3">
           <EventList events={this.state.events} />
         </Col>
