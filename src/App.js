@@ -13,7 +13,6 @@ import {
 
 // Component imports
 import EventList from './EventList';
-import IntroBox from './IntroBox';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { OfflineAlert } from './Alert';
@@ -105,28 +104,24 @@ class App extends Component {
 
     return (
       <Container fluid className="App">
-        <Row>
-          <Col xs={8} md={6} className="mx-auto mb-4">
-            <OfflineAlert
-              className="offline_alert"
-              text={this.state.offlineText}
-            />
-            <IntroBox />
-          </Col>
-        </Row>
+        <OfflineAlert className="offline_alert" text={this.state.offlineText} />
         <Form>
           <Row>
-            <Col lg={8} className="mb-5">
+            <Col lg={8} className="mb-3">
               <CitySearch
                 locations={this.state.locations}
                 updateEvents={this.updateEvents}
               />
             </Col>
-            <Col className="mb-5">
-              <NumberOfEvents
-                numberOfEvents={this.state.numberOfEvents}
-                updateEvents={this.updateEvents}
-              />
+            <Col className="mb-3">
+              <p>
+                Show&nbsp;
+                <NumberOfEvents
+                  numberOfEvents={this.state.numberOfEvents}
+                  updateEvents={this.updateEvents}
+                />
+                &nbsp;events
+              </p>
             </Col>
           </Row>
         </Form>
@@ -135,13 +130,11 @@ class App extends Component {
           <ResponsiveContainer
             className="recharts-responsive-container"
             height={400}
-            padding={{ top: 5, right: 20, bottom: 5, left: 20 }}
           >
             <ScatterChart
               style={{
                 border: '3px solid blue',
               }}
-              width={700}
               margin={{ top: 20, right: 20, bottom: 40, left: 20 }}
             >
               <CartesianGrid stroke="#333" strokeDasharray="3 3" />
