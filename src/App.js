@@ -1,6 +1,6 @@
 // Imports
 import React, { Component } from 'react';
-import { Container, Row, Col, Form } from 'react-bootstrap';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import {
   ScatterChart,
   Scatter,
@@ -19,6 +19,7 @@ import { OfflineAlert } from './Alert';
 import { extractLocations, getEvents, checkToken, getAccessToken } from './api';
 import WelcomeScreen from './WelcomeScreen';
 import EventGenre from './EventGenre';
+import { DarkMode } from './DarkMode';
 
 // Style imports
 import './App.css';
@@ -104,6 +105,23 @@ class App extends Component {
 
     return (
       <Container fluid className="App">
+        <div className="header_bar">
+          <Button
+            href="https://github.com/patricklemmer/meet"
+            target="_blank"
+            variant="link"
+          >
+            <i class="bi bi-github"></i>
+          </Button>
+          <Button
+            href="https://www.linkedin.com/in/patricklemmer/"
+            target="_blank"
+            variant="link"
+          >
+            <i class="bi bi-linkedin"></i>
+          </Button>
+          <DarkMode />
+        </div>
         <OfflineAlert className="offline_alert" text={this.state.offlineText} />
         <Form>
           <Row className="textboxes">

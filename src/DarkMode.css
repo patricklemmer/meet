@@ -1,0 +1,48 @@
+.toggle-theme {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  height: 34px;
+  width: 60px;
+}
+
+.slider {
+  background-color: #646464;
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: 0.3s;
+}
+
+.slider:before {
+  background-color: #646464;
+  box-shadow: inset 10px -3px 0px 0px #f4eeeb;
+  bottom: 4px;
+  content: '';
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.3s;
+  width: 26px;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background-color: #95a498;
+  box-shadow: none;
+}
+
+input:checked + .slider {
+  background-color: #fff;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
