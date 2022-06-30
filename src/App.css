@@ -158,18 +158,22 @@ p {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-right: 10%;
+  margin-left: 10%;
 }
-/* .data-vis-wrapper .recharts-responsive-container {
+.data-vis-wrapper .recharts-responsive-container {
   min-width: 100%;
   display: flex;
 }
 .recharts-surface {
   overflow: visible;
-} */
+}
 
 @media screen and (min-width: 992px) {
   .data-vis-wrapper {
     flex-direction: row;
+    margin-right: 15%;
+    margin-left: 15%;
   }
   .data-vis-wrapper .recharts-responsive-container {
     flex-basis: 50%;
