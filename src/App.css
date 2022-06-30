@@ -48,12 +48,18 @@ p {
   padding: 8px 6px 8px 10px;
   max-width: 350px;
   margin: 0 auto;
+  border: 3px solid green;
 }
 
 .numberOfEvents {
+  border: 3px solid green;
   padding: 8px 6px 8px 10px;
   max-width: 160px;
   margin: 0 auto;
+}
+
+.numberOfEvents p {
+  color: #333;
 }
 
 #events-number {
