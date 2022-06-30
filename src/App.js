@@ -128,12 +128,7 @@ class App extends Component {
         <Row className="data-vis-wrapper">
           <EventGenre events={this.state.events} />
           <ResponsiveContainer height={400}>
-            <ScatterChart
-              style={{
-                border: '3px solid black',
-              }}
-              margin={{ top: 20, right: 20, bottom: 40, left: 20 }}
-            >
+            <ScatterChart margin={{ top: 20, right: 20, bottom: 40, left: 20 }}>
               <CartesianGrid stroke="#333" strokeDasharray="3 3" />
               <XAxis type="category" dataKey="city" name="City" stroke="#333" />
               <YAxis
