@@ -171,7 +171,7 @@ p {
 
 @media screen and (min-width: 992px) {
   .data-vis-wrapper {
-    flex-direction: row;
+    flex-direction: column;
   }
   .data-vis-wrapper .recharts-responsive-container {
     flex-basis: 50%;
