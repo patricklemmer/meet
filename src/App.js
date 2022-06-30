@@ -109,6 +109,9 @@ class App extends Component {
           <Row>
             <Col lg={8} className="mb-3">
               <CitySearch
+                style={{
+                  border: '3px solid teal',
+                }}
                 locations={this.state.locations}
                 updateEvents={this.updateEvents}
               />
@@ -117,6 +120,9 @@ class App extends Component {
               <p>
                 Show&nbsp;
                 <NumberOfEvents
+                  style={{
+                    border: '3px solid green',
+                  }}
                   numberOfEvents={this.state.numberOfEvents}
                   updateEvents={this.updateEvents}
                 />
@@ -126,7 +132,12 @@ class App extends Component {
           </Row>
         </Form>
         <Row className="data-vis-wrapper">
-          <EventGenre events={this.state.events} />
+          <EventGenre
+            style={{
+              border: '3px solid red',
+            }}
+            events={this.state.events}
+          />
           <ResponsiveContainer
             className="recharts-responsive-container"
             height={400}
@@ -152,7 +163,12 @@ class App extends Component {
           </ResponsiveContainer>
         </Row>
         <Col md={8} className="mx-auto mb-3">
-          <EventList events={this.state.events} />
+          <EventList
+            style={{
+              border: '3px solid white',
+            }}
+            events={this.state.events}
+          />
         </Col>
         <WelcomeScreen
           showWelcomeScreen={this.state.showWelcomeScreen}

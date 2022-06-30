@@ -44,23 +44,6 @@ p {
   margin: auto;
 }
 
-.IntroBox {
-  max-width: 700px;
-  margin: auto;
-}
-
-.IntroBox h1 {
-  color: rgb(72, 72, 72);
-}
-
-.IntroBox h5 {
-  color: rgb(72, 72, 72);
-}
-
-.IntroBox p {
-  color: rgb(110, 110, 110);
-}
-
 .CitySearch {
   padding: 8px 6px 8px 10px;
   max-width: 350px;
@@ -108,10 +91,6 @@ p {
   margin-top: 20px;
   margin-bottom: 20px;
   margin: auto;
-}
-
-.chart {
-  background-color: rgba(244, 238, 235, 0.25);
 }
 
 .event {
